@@ -1,0 +1,38 @@
+<form>
+  Name:
+  <input type="text" name="name" [(ngModel)]="name"> <br>
+  department:
+  <input type="text" name="department" [(ngModel)]="department"> <br>
+  durtion:
+  <input type="text" name="durtion" [(ngModel)]="duration"> <br>
+
+  <button type="button" value="Submit" (click)="addData()" class="button">Add</button>
+</form>
+<br>
+
+<table id="tableStyle">
+  <tr>
+    <th>
+      name
+    </th>
+    <th>
+      dept
+    </th>
+    <th>
+      duration
+    </th>
+  </tr>
+
+  <tr *ngFor="let entry of tableData ">
+    <td>
+      {{entry.name}}
+    </td>
+    <td>
+      {{entry.department}}
+    </td>
+    <td>
+      {{entry.duration}}
+    </td>
+  </tr>
+</table>
+<br>
